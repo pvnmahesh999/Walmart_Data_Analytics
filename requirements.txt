@@ -1,0 +1,82 @@
+pandas
+pymysql
+sqlalchemy
+psycopg2
+
+
+#Instructions & Termnal Commands
+
+
+# Environment Setup
+
+## macOS Terminal Commands
+```bash
+# Install Homebrew if not installed
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Python (if not installed)
+brew install python
+
+# Install pip (Python package installer)
+sudo easy_install pip
+```
+
+## Windows Command Prompt Commands
+```cmd
+:: Install Python from the official website if not installed.
+:: Make sure to check "Add Python to PATH" during installation.
+
+:: Install pip if not installed (comes with Python installations).
+python -m ensurepip --upgrade
+```
+
+# Kaggle API Setup
+
+## Both macOS and Windows Commands
+```bash
+# Create a Kaggle account if you don't have one.
+# Go to your account settings and click on "Create New API Token".
+# This will download a file called kaggle.json.
+
+# Create a directory for Kaggle configuration
+mkdir ~/.kaggle      # macOS
+mkdir %USERPROFILE%\.kaggle   # Windows
+
+# Move kaggle.json to the Kaggle directory
+# Use the following commands to copy the kaggle.json file:
+mv ~/Downloads/kaggle.json ~/.kaggle/   # macOS
+copy %USERPROFILE%\Downloads\kaggle.json %USERPROFILE%\.kaggle\   # Windows
+
+# Set the permissions for kaggle.json
+chmod 600 ~/.kaggle/kaggle.json  # macOS
+```
+
+# Download Datasets
+
+## Both macOS and Windows Commands
+```bash
+# Navigate to the directory where you want to download the dataset
+cd path/to/your/directory
+
+# Example: Download a dataset (replace 'dataset-name' with the actual dataset slug)
+kaggle datasets download -d dataset-name
+
+# Unzip the dataset
+unzip dataset-name.zip   # This will extract the files in the current directory
+```
+
+# Install Required Libraries
+
+## Both macOS and Windows Commands
+```bash
+# Install the necessary Python libraries
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+# Summary of Commands
+1. **Environment Setup:** Install Homebrew (macOS) or Python (Windows).
+2. **Kaggle API Setup:** Generate API token and configure kaggle.json.
+3. **Download Datasets:** Use Kaggle API commands to download datasets and unzip them.
+4. **Install Libraries:** Use pip to install required libraries for data analysis.
+
+
